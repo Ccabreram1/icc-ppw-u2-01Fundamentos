@@ -1,0 +1,41 @@
+<h1>Proyectos</h1>
+
+<section>
+    <div>
+        <h3>Agregar Proyecto</h3>
+        <h4>Proyecto a agregar: {{name()}}</h4>
+        <input 
+            type="text" 
+            placeholder="Nombre del proyectos" 
+            [value]="name()"
+            (change)="changeName(txtName.value)" 
+            #txtName
+
+            >
+        <input 
+        type="text" 
+        placeholder="Descripción del proyecto" 
+        [value]="description()"
+        (change)="changeDescription(txtDescripcion.value)"
+        #txtDescripcion
+        >
+
+        <button (click)="addProyecto()">Agregar</button>
+
+    </div>
+    <div>
+        <div>
+        <h3>Listado</h3>
+         <ul>
+            <!-- <li>Proyecto 1</li>
+            <li>Proyecto 2</li> -->
+            @for(proyecto of proyectos(); track $index){
+            <li>{{proyecto.nombre}} - {{proyecto.descripcion}}</li>
+        }
+        </ul> 
+<!--imprime el listadoi -->
+        
+    </div>
+
+    </div>
+</section>

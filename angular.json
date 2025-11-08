@@ -27,6 +27,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/icc-ppw-u2-01Fundamentos/",
               "budgets": [
                 {
                   "type": "initial",
