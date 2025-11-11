@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Homepage { 
-  constructor(){
+  constructor(){  
     setInterval(()=>{
       console.log("*")
       this.counterSignal.update((v)=> v+1);

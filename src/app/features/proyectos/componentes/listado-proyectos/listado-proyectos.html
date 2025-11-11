@@ -1,0 +1,9 @@
+<h2>{{listName()}}</h2>
+
+<ul>
+    <!-- <li>Proyecto 1</li>
+    <li>Proyecto 2</li> -->
+    @for(proyecto of proyectos(); track $index){
+    <li>{{proyecto.nombre}} - {{proyecto.descripcion}}</li>
+    }
+</ul>

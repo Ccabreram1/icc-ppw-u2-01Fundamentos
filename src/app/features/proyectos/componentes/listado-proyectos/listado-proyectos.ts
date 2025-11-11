@@ -1,0 +1,17 @@
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { Proyectos } from '../../proyectos';
+
+
+@Component({
+  selector: 'listado-proyectos',
+  imports: [],
+  templateUrl: './listado-proyectos.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class ListadoProyectos { 
+
+  listName = input.required<string>();
+  proyectos = input.required<Proyecto[]>();
+
+}
+

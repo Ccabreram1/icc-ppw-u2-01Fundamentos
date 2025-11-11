@@ -1,1 +1,11 @@
-<p>proyectos2 works!</p>,
+
+<listado-proyectos 
+    listName="Listado de Proyectos desde servicios"
+    [proyectos]="proyectosService.proyectos()"
+></listado-proyectos>   
+
+<add-proyecto
+    (newProyecto)="proyectosService.addProyecto($event)"
+    (removeProyecto)="proyectosService.dellFirstProyecto(1)"
+></add-proyecto>
+
