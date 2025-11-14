@@ -1,0 +1,78 @@
+<!-- <h1>FormularioPage works!</h1>
+<form [formGroup]="myFrom">
+    <input formControlName="nombre" placeholder="Nombre">
+    <input formControlName="edad" placeholder="Edad">
+    <input formControlName="email" placeholder="Correo">
+</form> -->
+
+<div class="row">
+    <div class ="col">
+        <form 
+            autocomplete="off"
+            [formGroup]="myFrom"
+            (ngSubmit)="onSubmit()"
+        >
+        <!-- Compo: nombre -->
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Nombre</label>
+                <div class="col-sm-9">
+                    <input 
+                        type="text"
+                        class="form-control"
+                        placeholder="Nombre del usuario"
+                        formControlName="nombre"
+                    >
+                    @if (formUtils.isValidField(myFrom, 'nombre')) {
+                        <samp class="form-text text-dager">
+                            {{ formUtils.getFieldError(myFrom, 'nombre') }} 
+                        </samp>
+                    }
+                </div>
+            </div>
+       <!-- Compo: edad -->     
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Edad</label>
+                <div class class="col-sm-9">
+                    <input 
+                        type="number"
+                        class="form-control"
+                        placeholder="Edad del usuario"
+                        formControlName="edad"
+                    >
+                    @if (formUtils.isValidField(myFrom, 'edad')) {
+                        <samp class="form-text text-dager">
+                            {{ formUtils.getFieldError(myFrom, 'edad') }} 
+                        </samp>
+                    }
+                </div>
+            </div>
+       <!-- Compo: email -->     
+            <div class="mb-3 row">
+                <label class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                    <input      
+                        type="email"
+                        class="form-control"
+                        placeholder="Email del usuario"
+                        formControlName="email"
+                    >
+                    @if (formUtils.isValidField(myFrom, 'email')) {
+                        <samp class="form-text text-dager">
+                            {{ formUtils.getFieldError(myFrom, 'email') }} 
+                        </samp>
+                    }
+                </div>
+            </div>                  
+            <div class="row">
+                <div class="col">
+                    <button 
+                        type ="submit"
+                        class="btn btn-primary float-end"
+                    >
+                    Guardar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> 

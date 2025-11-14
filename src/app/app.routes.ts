@@ -4,6 +4,7 @@ import { Homepage } from './features/homepage/homepage';
 import { PerfilPage } from './features/PerfilPage/PerfilPage';
 import { Proyectos } from './features/proyectos/proyectos';
 import { Proyectos2 } from './features/proyectos2/proyectos2';
+import { FormularioPage } from './features/formularioPage/formularioPage';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,11 @@ export const routes: Routes = [
     {
         path: 'proyectos2',
         component: Proyectos2,
+    },
+
+    {
+        path: 'formularioPage',
+        component: FormularioPage,
     }
 ];
     
