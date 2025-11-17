@@ -3,5 +3,9 @@
   <a routerLink="/perfil" routerLinkActive="active">Perfil</a>
   <a routerLink="/proyectos" routerLinkActive="active">Proyectos</a>
   <a routerLink="/proyectos2" routerLinkActive="active">Proyectos Dos</a>
-  <a routerLink="/formularioPage" routerLinkActive="active">Formulario</a>
+  <!-- <a routerLink="/formularioPage" routerLinkActive="active">Formulario</a> -->
+  <a [routerLink]="['/formularios/basic']" routerLinkActive="active">FormularioBascio</a>
+  <a [routerLink]="['/formularios/dynamic']" routerLinkActive="active">FormularioDinamico</a>
+  <a [routerLink]="['/formularios/more']" routerLinkActive="active">FormularioMore</a>
+   
 </nav>
